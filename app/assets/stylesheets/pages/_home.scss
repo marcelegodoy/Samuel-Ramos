@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.main-layout {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem;
+}
