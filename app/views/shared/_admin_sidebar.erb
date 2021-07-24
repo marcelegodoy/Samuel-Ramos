@@ -1,0 +1,13 @@
+<div class='sidebar'>
+  <div class='header'>
+    <h1>Configurações</h1>
+
+    <div class='social-media'>
+    </div>
+  </div>
+
+  <div class='social-media'>
+    <%= link_to "Login", new_user_session_path %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  </div>
+</div>
