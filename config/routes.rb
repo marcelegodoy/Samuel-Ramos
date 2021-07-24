@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   devise_for :users
-  get '/user', to: "admin/projects#index", as: :user_root
+
+  namespace :guest do
+    resources :projects, only: [:index]
+  end
 
   namespace :admin do
     resources :projects, only: [:index]
