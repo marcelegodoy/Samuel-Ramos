@@ -5,6 +5,13 @@
   max-height: 100vh;
   max-width: 300px;
 
+  .header {
+    a, a:hover {
+      color: unset;
+      text-decoration: none;
+    }
+  }
+
   .social-media {
     display: flex;
     flex-direction: row;
