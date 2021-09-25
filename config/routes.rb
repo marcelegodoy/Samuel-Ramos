@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   namespace :guest do
     resources :projects, only: [:index]
+
+    root to: 'projects#index'
   end
 
   namespace :admin do
