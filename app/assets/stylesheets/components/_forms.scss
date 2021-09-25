@@ -10,3 +10,15 @@ input.form-control {
     box-shadow: none;
   }
 }
+
+textarea.form-control {
+  background-color: transparent;
+  border: 1px solid $dark-gray;
+  border-radius: 0;
+  &:focus {
+    border: 2px solid $black;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+}
