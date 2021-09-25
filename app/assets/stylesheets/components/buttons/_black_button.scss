@@ -1,0 +1,13 @@
+.button-black {
+  background-color: $dark-gray;
+  color: $light-gray;
+
+  a {
+    color: $light-gray;
+  }
+
+  &:hover {
+    background-color: darken($medium-gray, 5%);
+    color: $light-gray;
+  }
+}
