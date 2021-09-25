@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   def home
     redirect_user if current_user
+
+    @projects = Project.all
   end
 
   def redirect_user
