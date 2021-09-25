@@ -15,7 +15,9 @@
     <%# render 'shared/flashes' %>
     <div class='main-layout'>
       <%= render 'shared/admin_sidebar' %>
-      <%= yield %>
+      <div class='dashboard-content'>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
