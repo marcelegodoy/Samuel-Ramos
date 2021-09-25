@@ -18,11 +18,11 @@ a, button {
 }
 
 a {
-  color: $medium-gray;
+  color: $dark-gray;
   text-decoration: none;
 
   &:hover {
-    color: $dark-gray;
+    color: $medium-gray;
     text-decoration: none;
   }
 }
