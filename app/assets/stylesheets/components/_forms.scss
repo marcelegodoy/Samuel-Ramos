@@ -1,7 +1,7 @@
-.form-control {
+input.form-control {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $gray;
+  border-bottom: 1px solid $dark-gray;
   border-radius: 0;
   &:focus {
     border-bottom: 2px solid $black;
