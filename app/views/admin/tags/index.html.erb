@@ -12,10 +12,6 @@
           <%# sort_link(@q, :title, 'Título') %>
         </th>
         <th>
-          Descrição
-          <%# sort_link(@q, :created_at, 'Data', default_order: :asc) %>
-        </th>
-        <th>
           Ações
         </th>
       </tr>
@@ -25,11 +21,8 @@
         <tr>
           <td>
             <%= link_to admin_tag_path(tag) do %>
-              <%= tag.title %>
+              <%= tag.name %>
             <% end %>
-          </td>
-          <td>
-            <%= tag.description %>
           </td>
           <td>
             <%= link_to edit_admin_tag_path(tag) do %>
