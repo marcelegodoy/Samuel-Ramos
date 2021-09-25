@@ -13,8 +13,11 @@
 @import "components/index";
 @import "pages/index";
 
-a {
+a, button {
   cursor: pointer;
+}
+
+a {
   color: $medium-gray;
   text-decoration: none;
 
