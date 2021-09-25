@@ -1,6 +1,6 @@
 module Admin
   class TagsController < BaseController
-    before_action :set_tag, only: %i[show create edit update destroy]
+    before_action :set_tag, only: %i[show edit update destroy]
 
     def index
       @tags = Tag.all
@@ -15,7 +15,7 @@ module Admin
     def create
       @tag = Tag.new(tag_params)
       if @tag.save
-        redirect_to admin_tag_path(@tag), notice: 'Projeto salvo com sucesso'
+        redirect_to admin_tag_path(@tag), notice: 'Tag salva com sucesso'
       else
         render :show
       end
@@ -26,7 +26,7 @@ module Admin
     def update
       @tag.update(tag_params)
       if @tag.save
-        redirect_to admin_tag_path(@tag), notice: 'Projeto editado com sucesso'
+        redirect_to admin_tag_path(@tag), notice: 'Tag editada com sucesso'
       else
         render :edit
       end
@@ -34,7 +34,7 @@ module Admin
 
     def destroy
       if @tag.destroy
-        redirect_to admin_tags_path, notice: 'Projeto deletado com sucesso'
+        redirect_to admin_tags_path, notice: 'Tag deletada com sucesso'
       else
         render :index
       end

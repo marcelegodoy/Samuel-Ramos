@@ -15,7 +15,7 @@ module Admin
     def create
       @text = Text.new(text_params)
       if @text.save
-        redirect_to admin_text_path(@text), notice: 'Projeto salvo com sucesso'
+        redirect_to admin_text_path(@text), notice: 'Texto salvo com sucesso'
       else
         render :show
       end
@@ -26,7 +26,7 @@ module Admin
     def update
       @text.update(text_params)
       if @text.save
-        redirect_to admin_text_path(@text), notice: 'Projeto editado com sucesso'
+        redirect_to admin_text_path(@text), notice: 'Texto editado com sucesso'
       else
         render :edit
       end
@@ -34,7 +34,7 @@ module Admin
 
     def destroy
       if @text.destroy
-        redirect_to admin_texts_path, notice: 'Projeto deletado com sucesso'
+        redirect_to admin_texts_path, notice: 'Texto deletado com sucesso'
       else
         render :index
       end
