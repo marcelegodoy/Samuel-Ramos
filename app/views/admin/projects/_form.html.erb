@@ -1,0 +1,7 @@
+<%= simple_form_for [:admin, @project] do |f| %>
+  <%= f.input :title, label:"Título" %>
+  <%= f.input :description, label:"Descrição" %>
+  <div class="form-actions">
+    <%= f.button :submit, "Salvar", class:"button-black" %>
+  </div>
+<% end %>
