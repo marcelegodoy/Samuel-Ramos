@@ -12,6 +12,15 @@
     }
   }
 
+  .sidebar-list {
+    a {
+      display: block;
+      &:hover {
+        border-right: 1px solid $dark-gray;
+      }
+    }
+  }
+
   .social-media {
     display: flex;
     flex-direction: column;
@@ -21,7 +30,6 @@
       margin: .15rem;
       flex-grow: 1;
       border-top: 1px solid $dark-gray;
-      color: $dark-gray;
       &:hover {
         border-top: 1px solid $medium-gray;
         text-decoration: none;
