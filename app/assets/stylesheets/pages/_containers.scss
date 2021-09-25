@@ -7,6 +7,13 @@
   height: 100%;
 }
 
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0.7rem;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
