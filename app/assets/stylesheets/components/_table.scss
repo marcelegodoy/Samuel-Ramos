@@ -1,0 +1,20 @@
+table {
+  padding: 1rem;
+  thead {
+    tr {
+      border-bottom: 4px solid $medium-gray;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid $medium-gray;
+    }
+  }
+  thead, tbody {
+    tr {
+      td, th {
+        padding: .5rem 1rem;
+      }
+    }
+  }
+}
