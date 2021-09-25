@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :projects
-    resources :texts, only: %i[:show :edit :update]
-    resources :tags, only: [:index]
+    resources :texts
+    resources :tags
 
     root to: 'projects#index'
   end
