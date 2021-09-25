@@ -1,8 +1,8 @@
 .sidebar {
   display: flex;
-  padding: 0.7rem;
   flex-direction: column;
-  max-height: 100vh;
+  justify-content: space-between;
+  padding: 0.7rem;
   max-width: 300px;
 
   .header {
@@ -14,18 +14,23 @@
 
   .social-media {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
 
     a {
       margin: .15rem;
       flex-grow: 1;
-      border-top: 1px solid gray;
-      color: $gray;
+      border-top: 1px solid $dark-gray;
+      color: $dark-gray;
       &:hover {
-        border-top: 1px solid $gray;
+        border-top: 1px solid $medium-gray;
         text-decoration: none;
       }
+    }
+
+    .media-link {
+      display: flex;
+      flex-direction: row;
     }
   }
 }
