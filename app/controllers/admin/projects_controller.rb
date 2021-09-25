@@ -1,6 +1,6 @@
 module Admin
   class ProjectsController < BaseController
-    before_action :set_project, only: %i[show create edit update]
+    before_action :set_project, only: %i[show create edit update destroy]
 
     def index
       @projects = Project.all
@@ -15,7 +15,7 @@ module Admin
     def create
       @project = Project.new(project_params)
       if @project.save
-        redirect_to project_path(@project), notice: 'Projeto salvo com sucesso'
+        redirect_to admin_project_path(@project), notice: 'Projeto salvo com sucesso'
       else
         render :show
       end
@@ -43,7 +43,7 @@ module Admin
     private
 
     def set_project
-      @project = Project.new
+      @project = Project.find(params[:id])
     end
 
     def project_params
