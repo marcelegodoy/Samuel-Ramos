@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :projects, only: [:index]
+    resources :projects
     resources :texts, only: [:index]
     resources :tags, only: [:index]
 
