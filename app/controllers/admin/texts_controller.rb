@@ -1,9 +1,24 @@
 module Admin
   class TextsController < BaseController
-    before_action :set_text, only: %i[edit update]
+    before_action :set_text, only: %i[show create edit update destroy]
 
-    def show
-      @text = Text.first
+    def index
+      @texts = Text.all
+    end
+
+    def show;end
+
+    def new
+      @text = Text.new
+    end
+
+    def create
+      @text = Text.new(text_params)
+      if @text.save
+        redirect_to admin_text_path(@text), notice: 'Projeto salvo com sucesso'
+      else
+        render :show
+      end
     end
 
     def edit;end
@@ -11,9 +26,17 @@ module Admin
     def update
       @text.update(text_params)
       if @text.save
-        redirect_to admin_text_path(@text), notice: 'Texto da sidebar editado com sucesso'
+        redirect_to admin_text_path(@text), notice: 'Projeto editado com sucesso'
       else
         render :edit
+      end
+    end
+
+    def destroy
+      if @text.destroy
+        redirect_to admin_texts_path, notice: 'Projeto deletado com sucesso'
+      else
+        render :index
       end
     end
 
