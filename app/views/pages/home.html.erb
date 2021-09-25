@@ -1,4 +1,6 @@
 <div class="main-content">
-  <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
+  <% @projects.each do |project| %>
+    <h1><%= project.title %></h1>
+    <p><%= project.title %></p>
+  <% end %>
 </div>
