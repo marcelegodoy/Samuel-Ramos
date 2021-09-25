@@ -1,1 +1,39 @@
-<h1>Hello world</h1>
+<div class="dashboard-content">
+  <div class="dashboard-header">
+    <h1>Projetos</h1>
+  </div>
+
+  <div class="dashboard-table">
+    <table>
+      <tr>
+        <th>
+          Título
+          <%# sort_link(@q, :title, 'Título') %>
+        </th>
+        <th>
+          Descrição
+          <%# sort_link(@q, :created_at, 'Data', default_order: :asc) %>
+        </th>
+        <th>
+          Ações
+        </th>
+      </tr>
+      <% @projects.each do |project| %>
+        <tr>
+          <td>
+            <%= link_to student_project_path(project) do %>
+              <%= project.title %>
+            <% end %>
+          </td>
+          <td>
+            <%= project.description %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+
+    <div class="table-pagination">
+      <%# paginate @projects %>
+    </div>
+  </div>
+</div>
