@@ -32,6 +32,8 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'inline_svg'
+gem 'kaminari'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'simple_form'
 
