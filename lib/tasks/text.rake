@@ -1,5 +1,5 @@
-# Run it with rake sidebar_text:generate
-namespace :sidebar_text do
+# Run it with rake text:generate
+namespace :text do
   desc "Create Categories"
   task generate: :environment do
     p '-----------------'
