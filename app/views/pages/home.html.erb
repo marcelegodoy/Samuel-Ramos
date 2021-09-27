@@ -1,6 +1,6 @@
-<div class="main-content">
+<% if @projects %>
   <% @projects.each do |project| %>
     <h1><%= project.title %></h1>
     <p><%= project.title %></p>
   <% end %>
-</div>
+<% end %>
