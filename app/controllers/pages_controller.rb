@@ -1,10 +1,13 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :contact ]
 
   def home
     redirect_user if current_user
 
     @projects = Project.all
+  end
+
+  def contact
   end
 
   def redirect_user
