@@ -25,20 +25,15 @@
         <tr>
           <td>
             <%= link_to admin_text_path(text) do %>
-              <%= text.title %>
+              <%= text.identifier %>
             <% end %>
           </td>
           <td>
-            <%= text.description %>
+            <%= text.content %>
           </td>
           <td>
             <%= link_to edit_admin_text_path(text) do %>
               <i class="fas fa-edit"></i>
-            <% end %>
-            <%= link_to admin_text_path(text),
-                method: :delete,
-                data: { confirm: "Deletar projeto?" } do %>
-              <i class="far fa-trash-alt"></i>
             <% end %>
           </td>
         </tr>
