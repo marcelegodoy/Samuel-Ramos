@@ -15,7 +15,9 @@
     <%# render 'shared/flashes' %>
     <div class='main-layout'>
       <%= render 'shared/sidebar' %>
-      <%= yield %>
+      <div class="main-content">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
