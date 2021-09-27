@@ -5,7 +5,11 @@ namespace :sidebar_text do
     p '-----------------'
     p 'Creating sidebar text'
 
-    Text.find_or_create_by( identifier: "Samuel Ramos Arquitetura & Urbanismo",
+    Text.find_or_create_by( identifier: "name",
+                            content: "Samuel Ramos")
+    Text.find_or_create_by( identifier: "title",
+                            content: "Arquitetura & Urbanismo")
+    Text.find_or_create_by( identifier: "description",
                             content: "This typeface started as an interpretation of Albert Hollenstein’s famous «Brasilia» from 1958. A second version (G) with vertical terminals was drawn in order to let the modernistic feeling collide with a more humanistic expression. The untypical long tails of /f, /j, /r and /t are emphasized and accompanied with stylistic alternatives to give it a more contemporary feeling.")
 
     p '-----------------'
