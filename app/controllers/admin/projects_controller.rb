@@ -47,7 +47,7 @@ module Admin
     end
 
     def project_params
-      params.require(:project).permit(:description, :title)
+      params.require(:project).permit(:description, :title, :image)
     end
   end
 end
