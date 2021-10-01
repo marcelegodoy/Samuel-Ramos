@@ -5,7 +5,7 @@
 
 <p><%= @project.description  %></p>
 <% if @project.images.attached? %>
-  <%= @project.images.each do |image| %>
+  <% @project.images.each do |image| %>
     <%= image_tag(image) %>
   <% end %>
 <% end %>
