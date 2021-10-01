@@ -4,6 +4,9 @@
   justify-content: space-between;
   padding: 0.7rem;
   max-width: 300px;
+  max-height: 100vh;
+  height: 100%;
+  position: fixed;
 
   .header {
     a, a:hover {
