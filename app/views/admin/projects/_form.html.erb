@@ -1,7 +1,7 @@
 <%= simple_form_for [:admin, @project] do |f| %>
   <%= f.input :title, label:"Título" %>
   <%= f.input :description, label:"Descrição" %>
-  <%= f.input :image %>
+  <%= f.input :images, ad: :file, input_html: { multiple: true } %>
   <div class="form-actions">
     <%= f.button :submit, "Salvar", class:"button-black" %>
   </div>
