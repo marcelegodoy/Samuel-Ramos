@@ -1,6 +1,17 @@
 <% if @projects %>
+  <ul>
   <% @projects.each do |project| %>
-    <h1><%= project.title %></h1>
-    <p><%= project.description %></p>
+    <li>
+      <h1><%= project.title %></h1>
+      <p><%= project.description %></p>
+      <% if project.images.attached? %>
+        <% project.images.each do |image| %>
+          <div class="dashboard-project-image">
+            <%= image_tag(image) %>
+          </div>
+        <% end %>
+      <% end %>
+    </li>
   <% end %>
+  </ul>
 <% end %>
