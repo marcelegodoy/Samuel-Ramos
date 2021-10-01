@@ -2,7 +2,7 @@
 .main-layout {
   display: flex;
   flex-flow: row wrap;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   height: 100%;
 }
@@ -10,8 +10,10 @@
 .container-dashboard {
   display: flex;
   flex-direction: column;
+  width: 100%;
   flex-grow: 1;
   padding: 0.7rem;
+  margin-left: 300px;
 }
 
 .main-content {
@@ -19,6 +21,7 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 0.7rem;
+  margin-left: 300px;
 }
 
 .main-forms {
