@@ -4,3 +4,8 @@
 </div>
 
 <p><%= @project.description  %></p>
+<% if @project.image.present? %>
+  <%= image_tag @project.image %>
+<% else %>
+  <p>Nenhuma imagem anexada</p>
+<% end %>
