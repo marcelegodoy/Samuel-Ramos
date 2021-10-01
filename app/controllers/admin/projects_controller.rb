@@ -43,11 +43,11 @@ module Admin
     private
 
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.with_attached_images.find(params[:id])
     end
 
     def project_params
-      params.require(:project).permit(:description, :title, :image)
+      params.require(:project).permit(:description, :title, images: [])
     end
   end
 end
