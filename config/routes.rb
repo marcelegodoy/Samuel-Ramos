@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
-  root to: 'pages#home'
   get 'contact', to: 'pages#contact'
+
+  root to: 'projects#index'
+  resources :projects, only: [:index, :show]
 
   devise_for :users
 
   namespace :guest do
     resources :projects, only: [:index]
-
     root to: 'projects#index'
   end
 
