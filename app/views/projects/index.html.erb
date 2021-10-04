@@ -5,11 +5,9 @@
       <h1><%= project.title %></h1>
       <p><%= project.description %></p>
       <% if project.images.attached? %>
-        <% project.images.each do |image| %>
-          <div class="dashboard-project-image">
-            <%= image_tag(image) %>
-          </div>
-        <% end %>
+        <div class="dashboard-project-image">
+          <%= link_to image_tag(project.images.first), project_path(project) %>
+        </div>
       <% end %>
     </li>
   <% end %>

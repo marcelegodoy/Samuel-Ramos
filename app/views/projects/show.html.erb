@@ -1,0 +1,11 @@
+<div class="dashboard-header">
+  <h1><%= @project.title %></h1>
+  <%= link_to "< voltar", projects_path, class:"button-black" %>
+</div>
+
+<p><%= @project.description  %></p>
+<% if @project.images.attached? %>
+  <% @project.images.each do |image| %>
+    <%= image_tag(image) %>
+  <% end %>
+<% end %>
